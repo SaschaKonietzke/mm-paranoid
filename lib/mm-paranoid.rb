@@ -13,10 +13,10 @@ module MongoMapper
 
       module InstanceMethods
         def destroy
-          run_callbacks(:before_destroy)
+          #run_callbacks(:before_destroy)
           self.deleted_at = Time.now
           result = self.save
-          run_callbacks(:after_destroy)
+          #run_callbacks(:after_destroy)
           result
         end
 
